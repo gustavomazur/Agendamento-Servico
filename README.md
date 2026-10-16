@@ -25,7 +25,7 @@ Projeto desenvolvido para o gerenciamento de serviços, construído com foco em 
 - data = 2026-10-16
 
 ### POST 
-- Remover o Z
+- Remover o Z da hora 
   -  ``` EXEMPLO ``` 
 - {
 -  "id": 0,
