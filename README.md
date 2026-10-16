@@ -1,6 +1,6 @@
 # API de Agendamento de Horários
 
-Projeto desenvolvido para o gerenciamento de agendamentos de serviços, construído com foco em boas práticas de backend, utilizando DTOs, documentação interativa e tratamento de datas locais.
+Projeto desenvolvido para o gerenciamento de serviços, construído com foco em boas práticas de backend, utilizando DTOs, documentação interativa e tratamento de datas locais.
 
 ## Tecnologias Utilizadas
 - **Java 21** (Open JDK 21)
