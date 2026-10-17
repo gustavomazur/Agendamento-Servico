@@ -1,0 +1,19 @@
+# O build so precisa de pom.xml e src/ (ver Dockerfile)
+.git
+.gitignore
+.idea
+.vscode
+.agents
+.mvn
+mvnw
+mvnw.cmd
+target
+
+# Segredos: nunca entram no contexto de build
+envs
+
+# Arquivos que nao afetam o build
+*.md
+HELP.md
+skills-lock.json
+docker-compose.yaml
