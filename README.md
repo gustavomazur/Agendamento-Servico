@@ -10,7 +10,7 @@ aplicar boas práticas de desenvolvimento backend, utilizando DTOs, persistênci
 - **Spring Security** — autenticação e autorização (JWT)
 - **Spring Data JPA**
 - **PostgreSQL 17** — banco de dados utilizado no Docker
-- **JJWT** — geração e validação do JWT da aplicação
+- **JWT** — geração e validação do JWT da aplicação
 - **Google API Client** — verificação do token de login com Google (OpenID Connect)
 - **Lombok**
 - **Springdoc OpenAPI** — documentação interativa da API
