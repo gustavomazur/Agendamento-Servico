@@ -35,3 +35,9 @@ build/
 ### Segredos (nunca versionar) ###
 .env
 .env.local
+envs/.env
+envs/.env.*
+!envs/.env.example
+
+### Configuração local do Spring Boot ###
+src/main/resources/application.properties

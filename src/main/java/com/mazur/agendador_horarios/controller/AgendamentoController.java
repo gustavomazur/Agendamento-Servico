@@ -1,10 +1,10 @@
 package com.mazur.agendador_horarios.controller;
 
-import com.mazur.agendador_horarios.dto.AlteraAgendamentoDTO;
+import com.mazur.agendador_horarios.infrastructure.dto.AlteraAgendamentoDTO;
 import com.mazur.agendador_horarios.infrastructure.entity.AgendamentoEntity;
 import com.mazur.agendador_horarios.service.AgendamentoService;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -21,13 +21,15 @@ public class AgendamentoController {
         this.agendamentoService = agendamentoService;
     }
 
-    @PostMapping
+    @PostMapping("/usuarios/{sub}")
+    @PreAuthorize("hasRole('ADMIN') or #sub == authentication.name")
     public ResponseEntity<AgendamentoEntity> salvarAgendamento(
             @RequestBody AgendamentoEntity agendamentoEntity) {
         return ResponseEntity.accepted().body(agendamentoService.salvarAgendamento(agendamentoEntity));
     }
 
-    @DeleteMapping
+    @PutMapping("/usuarios/{sub}")
+    @PreAuthorize("hasRole('ADMIN') or #sub == authentication.name")
     public ResponseEntity<Void> deletarAgendamento(
             @RequestParam String cliente,
             @RequestParam LocalDateTime dataHoraAgendamento) {
@@ -35,12 +37,14 @@ public class AgendamentoController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping
+    @GetMapping("/usuarios/{sub}")
+    @PreAuthorize("hasRole('ADMIN') or #sub == authentication.name")
     public ResponseEntity<List<AgendamentoEntity>> buscarAgendamentosDia(@RequestParam LocalDate data) {
         return ResponseEntity.ok().body(agendamentoService.buscarAgendamentoDia(data));
     }
 
-    @PutMapping
+    @PutMapping("/usuarios/{sub}")
+    @PreAuthorize("hasRole('ADMIN') or #sub == authentication.name")
     public ResponseEntity<AgendamentoEntity> alterarAgendamento(@RequestBody AlteraAgendamentoDTO dto) {
         return ResponseEntity.accepted().body(agendamentoService.alterarAgendamentoDto(dto));
     }
