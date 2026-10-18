@@ -21,7 +21,7 @@ aplicar boas práticas de desenvolvimento backend, utilizando DTOs, persistênci
 A API utiliza duas camadas de JWT:
 
 1. **Google JWT** — o frontend (ex.: Google Sign-In) envia o token do Google (`credential`) para a aplicação;
-2. **JWT próprio** — a aplicação valida o token do Google e devolve um JWT assinado por ela mesma (JJWT, HS256), usado nas demais requisições.
+2. **JWT próprio** — a aplicação valida o token do Google e devolve um JWT assinado por ela mesma (JWT, HS256), usado nas demais requisições.
 
 ### Fluxo de login
 
