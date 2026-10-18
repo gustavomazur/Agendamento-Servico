@@ -1,6 +1,6 @@
 package com.mazur.agendador_horarios.service;
 
-import com.mazur.agendador_horarios.dto.AlteraAgendamentoDTO;
+import com.mazur.agendador_horarios.infrastructure.dto.AlteraAgendamentoDTO;
 import com.mazur.agendador_horarios.infrastructure.entity.AgendamentoEntity;
 import com.mazur.agendador_horarios.infrastructure.repository.AgendamentoRepository;
 import lombok.RequiredArgsConstructor;

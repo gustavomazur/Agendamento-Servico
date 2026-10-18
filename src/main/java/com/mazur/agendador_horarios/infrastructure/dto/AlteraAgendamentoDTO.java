@@ -1,4 +1,4 @@
-package com.mazur.agendador_horarios.dto;
+package com.mazur.agendador_horarios.infrastructure.dto;
 
 import java.time.LocalDateTime;
 
